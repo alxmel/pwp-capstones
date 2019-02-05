@@ -57,34 +57,6 @@ def ngram_creator(text_list):
         new_list.append('{first} {second}'.format(first=text_list[num], second=text_list[num + 1]))
     return new_list
 
-"""
-############ NOTE: I LEFT THIS IN ON PURPOSE: ######################
-This is what I had originally written, until I ran into a number of errors. Could you review this section
-and try to see how I ended up on this path? For some reason along the line I falsely assumed we were working
-with strings and tried to keep track of strings. After reading through the error messages, after fixing
-the '.append' error with strings, I eventually realized that we were working with math/integers. Is this
-an area you see a lot of people usually trip up on?
-
-# Comparing Two Frequency Tables    
-def frequency_comparison(table1, table2):
-    appearances = ''
-    mutual_appearances = ''
-    for key1, value1 in table1.items():
-        for key2, value2 in table2.items():
-#            if key1 in key2:
-            if key1 in table2.keys():
-                if value1 < value2:
-                    mutual_appearances.append(value1)
-                    appearances.append(value2)
-                elif value2 < value1:
-                    mutual_appearances.append(value2)
-                    appearances.append(value1)
-            else:
-                appearances.append(value1)
-            if key2 not in table1.keys():
-                appearances.append(key2) 
-    return (mutual_appearances/appearances)
-"""
 
 # Comparing Two Frequency Tables    
 def frequency_comparison(table1, table2):
